@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "home": "Home",
+    "market": "Market",
+    "dashboard": "Dashboard",
+    "orders": "Orders",
+    "my_orders": "My Orders",
+    "login": "Login",
+    "logout": "Logout"
+  },
+  "home": {
+    "hero_tag": "🌱 Fresh from farmers to your door",
+    "hero_title": "Fresh Vegetables,",
+    "hero_highlight": "Fair Prices",
+    "hero_desc": "Skip the middlemen. Buy fresh, healthy, and affordable vegetables and fruits directly from Rajshahi farmers.",
+    "btn_shop": "🛒 Shop Now",
+    "btn_join": "Join as Farmer →",
+    "stats_farmers": "Registered Farmers",
+    "stats_products": "Products Listed",
+    "stats_orders": "Successful Orders",
+    "stats_locations": "Regions Covered",
+    "testimonials_title": "Customer Reviews",
+    "testimonials_subtitle": "Experiences of those who used our service",
+    "testi_1_desc": "I am very satisfied buying vegetables from Shakdal. Prices are lower than the market and quality is top-notch.",
+    "testi_1_name": "Tanvir Hossain",
+    "testi_2_desc": "Getting products straight from the farmer leaves no doubt about its freshness.",
+    "testi_2_name": "Fariha Rahman",
+    "testi_3_desc": "As a farmer, I am finally getting the fair price for my crops. Thanks to Shakdal.",
+    "testi_3_name": "Rahim Uddin",
+    "testi_role_customer": "Regular Customer",
+    "testi_role_farmer": "Registered Farmer"
+  },
+  "auth": {
+    "login_title": "Welcome to Shakdal",
+    "login_desc": "Login to your account",
+    "phone_label": "📱 Phone / Username",
+    "phone_placeholder": "01XXXXXXXXX or farmer",
+    "password_label": "🔒 Password",
+    "password_placeholder": "Your password",
+    "btn_login": "Login",
+    "no_account": "Don't have an account?",
+    "register_link": "Register Now",
+    "quick_login": "Quick Login (Demo)",
+    "btn_farmer": "👨‍🌾 As Farmer",
+    "btn_customer": "🛒 As Customer"
+  }
+}
