@@ -37,10 +37,12 @@ function navigate(path: string) {
         <nav class="hidden md:flex items-center gap-1">
           <template v-if="!authStore.isFarmer">
             <router-link to="/"
+              exact-active-class="bg-primary-50 text-primary-700"
               class="px-4 py-2 rounded-lg text-gray-600 hover:text-primary-700 hover:bg-primary-50 transition-all font-medium">
               {{ $t('nav.home') }}
             </router-link>
             <router-link to="/marketplace"
+              active-class="bg-primary-50 text-primary-700"
               class="px-4 py-2 rounded-lg text-gray-600 hover:text-primary-700 hover:bg-primary-50 transition-all font-medium">
               {{ $t('nav.market') }}
             </router-link>
@@ -48,10 +50,12 @@ function navigate(path: string) {
 
           <template v-if="authStore.isFarmer">
             <router-link to="/farmer/dashboard"
+              exact-active-class="bg-primary-50 text-primary-700"
               class="px-4 py-2 rounded-lg text-gray-600 hover:text-primary-700 hover:bg-primary-50 transition-all font-medium">
               {{ $t('nav.dashboard') }}
             </router-link>
             <router-link to="/farmer/orders"
+              active-class="bg-primary-50 text-primary-700"
               class="px-4 py-2 rounded-lg text-gray-600 hover:text-primary-700 hover:bg-primary-50 transition-all font-medium">
               {{ $t('nav.orders') }}
             </router-link>
@@ -59,6 +63,7 @@ function navigate(path: string) {
 
           <template v-if="authStore.isCustomer">
             <router-link to="/orders"
+              active-class="bg-primary-50 text-primary-700"
               class="px-4 py-2 rounded-lg text-gray-600 hover:text-primary-700 hover:bg-primary-50 transition-all font-medium">
               {{ $t('nav.my_orders') }}
             </router-link>
@@ -121,15 +126,15 @@ function navigate(path: string) {
     <div v-if="mobileMenuOpen"
       class="md:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-1 animate-fade-in-up">
       <template v-if="!authStore.isFarmer">
-        <button @click="navigate('/')" class="block w-full text-left px-4 py-3 rounded-lg text-gray-700 hover:bg-primary-50 font-medium cursor-pointer">🏠 {{ $t('nav.home') }}</button>
-        <button @click="navigate('/marketplace')" class="block w-full text-left px-4 py-3 rounded-lg text-gray-700 hover:bg-primary-50 font-medium cursor-pointer">🏪 {{ $t('nav.market') }}</button>
+        <router-link to="/" @click="mobileMenuOpen = false" exact-active-class="bg-primary-50 text-primary-700" class="block w-full text-left px-4 py-3 rounded-lg text-gray-700 hover:bg-primary-50 font-medium cursor-pointer">🏠 {{ $t('nav.home') }}</router-link>
+        <router-link to="/marketplace" @click="mobileMenuOpen = false" active-class="bg-primary-50 text-primary-700" class="block w-full text-left px-4 py-3 rounded-lg text-gray-700 hover:bg-primary-50 font-medium cursor-pointer">🏪 {{ $t('nav.market') }}</router-link>
       </template>
       <template v-if="authStore.isFarmer">
-        <button @click="navigate('/farmer/dashboard')" class="block w-full text-left px-4 py-3 rounded-lg text-gray-700 hover:bg-primary-50 font-medium cursor-pointer">📊 {{ $t('nav.dashboard') }}</button>
-        <button @click="navigate('/farmer/orders')" class="block w-full text-left px-4 py-3 rounded-lg text-gray-700 hover:bg-primary-50 font-medium cursor-pointer">📦 {{ $t('nav.orders') }}</button>
+        <router-link to="/farmer/dashboard" @click="mobileMenuOpen = false" exact-active-class="bg-primary-50 text-primary-700" class="block w-full text-left px-4 py-3 rounded-lg text-gray-700 hover:bg-primary-50 font-medium cursor-pointer">📊 {{ $t('nav.dashboard') }}</router-link>
+        <router-link to="/farmer/orders" @click="mobileMenuOpen = false" active-class="bg-primary-50 text-primary-700" class="block w-full text-left px-4 py-3 rounded-lg text-gray-700 hover:bg-primary-50 font-medium cursor-pointer">📦 {{ $t('nav.orders') }}</router-link>
       </template>
       <template v-if="authStore.isCustomer">
-        <button @click="navigate('/orders')" class="block w-full text-left px-4 py-3 rounded-lg text-gray-700 hover:bg-primary-50 font-medium cursor-pointer">📦 {{ $t('nav.my_orders') }}</button>
+        <router-link to="/orders" @click="mobileMenuOpen = false" active-class="bg-primary-50 text-primary-700" class="block w-full text-left px-4 py-3 rounded-lg text-gray-700 hover:bg-primary-50 font-medium cursor-pointer">📦 {{ $t('nav.my_orders') }}</router-link>
       </template>
     </div>
   </header>
